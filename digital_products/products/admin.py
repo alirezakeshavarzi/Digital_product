@@ -17,11 +17,10 @@ class FileInlineAdmin(admin.StackedInline):
 
 
 @admin.register(Product)
-
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['title', 'is_enable', 'create_time']
+    list_display = ['parent','title', 'is_enable', 'create_time']
     list_filter = ['is_enable']
     search_fields = ['title']
-    inlines = FileInlineAdmin
+    #inlines = FileInlineAdmin
 
 # Register your models here.
