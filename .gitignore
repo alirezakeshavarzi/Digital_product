@@ -2,3 +2,5 @@
 venv/
 .idea/
 **/ــpycacheــ/
+
+local_settings.py
