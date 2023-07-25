@@ -29,7 +29,7 @@ class Product(models.Model):
 
     class Meta:
         db_table = 'products' # A table that create in databases.
-        verbose_name= _('adas') # Show this name in admin panel.
+        verbose_name= _('products') # Show this name in admin panel.
         verbose_name_plural = _('products') # برای اسم جمع
 
 
