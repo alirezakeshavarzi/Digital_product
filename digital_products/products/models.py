@@ -47,4 +47,7 @@ class File(models.Model):
         db_table = 'files'
         verbose_name=_('file')
         verbose_name_plural = _('files')
+
+    def __str__(self):
+        return self.title
 # Create your models here.
