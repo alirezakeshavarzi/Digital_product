@@ -5,7 +5,7 @@ from rest_framework.response import Response
 
 from .models import Product, File, Category
 
-from .serializers import ProductSerializer
+from .serializers import ProductSerializer, CategorySerializer, FileSerializer
 
 class ProductListView(APIView):
 
@@ -14,13 +14,13 @@ class ProductListView(APIView):
         serializer = ProductSerializer(products, many=True)
         return Response(serializer.data)
 
-'''class CategoryListView(APIView):
+class CategoryListView(APIView):
 
     def get(self, request):
         categorys = Category.objects.all()
-        serializer = Serializer(categorys,many=True)
+        serializer = CategorySerializer(categorys,many=True)
         return Response(serializer.data)
-'''
+
 
 
 
