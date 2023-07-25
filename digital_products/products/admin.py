@@ -8,10 +8,10 @@ class CategoryAdmin(admin.ModelAdmin):
     list_filter = ['is_enable']
     search_fields = ['title'] # search in titles(in database)
 
-#@admin.register(File)
-class FileInlineAdmin(admin.StackedInline):
+@admin.register(File)
+class FileInlineAdmin(admin.ModelAdmin):
     model = File
-    fields = ['title', 'file', 'is_enable']
+    list_display = ['title', 'file', 'is_enable']
     extra = 0
 
 
